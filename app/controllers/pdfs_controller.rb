@@ -15,7 +15,7 @@ class PdfsController < ActionController::Base
     kit = PDFKit.new(html, footer_left: left_footer(submission_id))
     pdf = kit.to_pdf
 
-    send_data(pdf, type: 'application/pdf', disposition: "attachment; filename=receipt-#{submission_id}.pdf")
+    send_data(pdf.force_encoding('BINARY'), type: 'application/pdf', disposition: "attachment; filename=receipt-#{submission_id}.pdf")
   end
 
   private
