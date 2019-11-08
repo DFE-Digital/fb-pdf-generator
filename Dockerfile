@@ -1,4 +1,4 @@
-FROM ruby:2.6.4
+FROM ruby:2.6.5
 
 RUN apt update
 RUN apt install build-essential tzdata
