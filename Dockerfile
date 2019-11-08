@@ -1,7 +1,7 @@
 FROM ruby:2.6.5
 
 RUN apt update
-RUN apt install build-essential tzdata
+RUN apt install -y build-essential tzdata
 
 WORKDIR /app
 ENV HOME /app
